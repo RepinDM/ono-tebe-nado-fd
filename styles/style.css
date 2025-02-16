@@ -1,1 +1,390 @@
-/* место для вашего кода */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 183px; 
+}
+
+/* Стили для шапки сайта */
+.site-header {
+  display: grid;
+  grid-template-columns: 1.51fr 2fr 1.5fr;
+  align-items: center;
+  padding: 148px 50px 94px 50px;
+}
+
+.nav-list {
+  list-style: circle;
+  display: flex;
+  gap: 34px; 
+}
+
+.nav-item {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  
+}
+
+.nav-item--active {
+  text-decoration: none;
+  list-style: none; /* Убираем подчеркивание */ 
+}
+
+.nav-link { 
+  font-size: 18px; 
+  color: inherit; /* Наследуем цвет от родителя */
+  white-space: nowrap; /* Добавлено для избежания переноса текста */
+}
+
+.nav-link--current {
+  text-decoration: none; 
+}
+
+/* Логотип сайта */
+.site-logo {
+  display: block;
+  justify-self: center;
+  align-self: center;
+  width: 138px; 
+  margin-left: -124px;
+  margin-top: 6px;
+}
+
+.logo-image {
+  width: 100%;
+  display: block; 
+}
+
+/* Контактная информация в шапке */
+.header-contact {
+  justify-self: end;
+  font-style: inherit;
+  margin-left: 23px;
+  margin-top: 1px;
+}
+
+.contact-item {
+  display: block;
+  font-size: 18px;
+  line-height: 1.35;
+  text-underline-position: under; 
+}
+
+.contact-item-address {
+  font-size: 18px;
+  line-height: 1.35;
+  font-style: normal;  
+}
+
+/* Общий контейнер секции */
+.hero-section {
+  position: relative; 
+  padding: 165px 50px 50px 50px; 
+  background-image: url(../images/cover.jpg); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  overflow: hidden; 
+}
+
+.hero-section__backdrop {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: 0; 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.hero-section__headline {
+  position: relative; 
+  z-index: 1;
+  display: flex; 
+  flex-direction: column; 
+  gap: 20px; 
+  color: #FFF; 
+  font-weight: bold; 
+  font-size: 100px; 
+  line-height: 1.15; 
+  letter-spacing: 0.3em; /*  Расстояние между буквами, em делает значение относительным к размеру шрифта */
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /*  Тень для улучшения читаемости на фоне */
+}
+
+.hero-section__headline-part--centered {
+  line-height: 1;
+  text-align: center; /*  Выравнивание текста по центру */
+  margin-top: 7px;
+  margin-right: -32px;
+}
+
+.hero-section__headline-part--right-aligned {
+  line-height: 1;
+  text-align: right; /*  Выравнивание текста по правому краю */
+  margin-top: 15px;
+  margin-right: -31px;
+}
+
+.hero-section__promo {
+  position: relative; 
+  z-index: 1;
+  display: flex; /* Flexbox для горизонтального выравнивания */
+  justify-content: flex-end; 
+  align-items: center; 
+  gap: 106px; 
+  padding-top: 113px; 
+}
+
+.hero-section__tagline {
+  color: #FFF; 
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: left;
+  word-spacing: 0.824em; /*  Расстояние между словами */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Тень для улучшения читаемости */
+}
+
+.hero-section__action-button {
+  border: 1px solid #FFF; 
+  padding: 14px 32px; 
+  color: #FFF; 
+  font-weight: normal; 
+  font-size: 22px; 
+  line-height: 1; 
+  text-transform: uppercase; 
+  background-color: transparent; 
+  cursor: pointer; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.hero-section__action-button:hover {
+  color: #b72aba; 
+  background-color: #FFF; 
+}
+/* --- Стили для секции с лотами --- */
+.relevant-section__title { 
+  font-size: 40px;
+  line-height: 47px;
+  font-weight: 700;
+  margin-bottom: 27px;
+  margin-left: 65px;
+  margin-top: -4px;
+  text-transform: uppercase;
+}
+
+.lots__grid-list { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 25px; 
+  list-style: none; 
+  padding: 0;
+  margin: 24px;
+}
+
+.lots__grid-list-item { /* Элемент списка лотов */
+  height: 100%;  
+}
+
+.item-link { /* Ссылка, оборачивающая карточку */
+  display: block; 
+  height: 100%;
+  text-decoration: none; 
+}
+
+.item { /* Общий стиль для карточки */
+  position: relative;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  gap: 32px;
+  width: 100%;
+  height: 100%;
+  padding: 50px 40px;
+  box-sizing: border-box; 
+}
+
+/* --- Стили для разных типов карточек (фон) --- */
+
+.item_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.item_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.item_type_painting { 
+  background-image: url(../images/card-lot-03.jpg);
+}
+
+/* Общие стили для фоновых изображений карточек */
+.item_type_film,
+.item_type_book,
+.item_type_painting {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item__title { /* Заголовок карточки */
+  position: relative; 
+  z-index: 1; 
+  color: #FFF; 
+  font-weight: bold; 
+  font-size: 22px;
+  line-height: 1.2; 
+  text-decoration: underline; 
+  text-transform: uppercase; 
+  
+}
+
+.item__description { /* Описание карточки */
+  position: relative; 
+  z-index: 1; /* Поверх overlay */
+  color: #FFF; 
+  font-size: 20px;
+  line-height: 1.2; 
+  margin-left: 2px;
+}
+
+/* --- Стили для ссылки "Посмотреть больше" --- */
+.relevant-section__link {
+  display: block; 
+  margin: 29px 0 0 65px;
+  font-size: 20px;
+  text-decoration: underline; 
+  text-underline-position: under; 
+  width: fit-content; 
+  color: black;
+}
+
+/* --- Стили для overlay --- */
+.item__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  z-index: 0; 
+}
+
+/* Стили для секции "Об аукционе" */
+.about-section {
+  display: grid; 
+  grid-template-columns: auto 1fr; 
+  gap: 72px; 
+  padding: 0 0 0 47px; 
+}
+
+/* Контейнер логотипа */
+.about-section__logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px; 
+  height: 240px; 
+  border-radius: 50%; 
+  background-color: #000000; 
+  margin-top: -27px;
+  margin-left: 25px;
+  
+}
+
+/* Изображение логотипа */
+.about-section__logo-image {
+  width: 148px; /* Ширина изображения */
+  
+}
+
+/* Заголовок секции */
+.about-section__title {
+  padding: 73px 0 100px; 
+  font-weight: bold; 
+  font-size: 40px; 
+  line-height: 47px; 
+  text-transform: uppercase; 
+}
+
+/* Контейнер для описания */
+.about-section__description {
+  width: 693px;
+  height: 312px;
+}
+
+/* Текст описания */
+.about-section__text {
+  font-size: 20px; 
+  font-weight: 400;
+  line-height: normal; 
+  margin-bottom: 27px; /* Отступ снизу для каждого абзаца */
+}
+
+/* Контейнер всего блока about */
+.about-section__container {
+  display: contents; /* Убираем лишний контейнер из сетки */
+}
+
+.site-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 180px 50px 80px; /* Совмещаем padding из .footer*/
+}
+
+.site-footer__contact-info {
+  justify-self: flex-start;
+  font-style: inherit;
+  font-size: 18px;
+  line-height: 1.35;
+  text-underline-position: under;
+  margin-left: 2px;
+}
+
+.site-footer__contact-link {
+/* Стили для ссылок (телефон, email) */
+  display: block;
+}
+
+.site-footer__contact-address {
+/* Стили для адреса */
+  font-size: 18px;
+  line-height: 1.35;
+  text-underline-position: under;
+}
+
+.site-footer__navigation {
+  margin-right: -4px;/* Стили для блока навигации */
+}
+
+.site-footer__menu-list {  
+  text-align: center;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 400;
+  text-underline-position: under;
+}
+
+.site-footer__menu-link {
+  font-size: 18px;
+  line-height: normal;
+  text-underline-position: under;
+  color: inherit;       /* Наследуем цвет от родителя, чтобы работали стили ссылок */
+}
+.site-footer__menu-active {
+  text-decoration: none;
+}
+
+.site-footer__social-links {
+  display: flex;
+  gap: 48px;
+  list-style: none;
+}
+
+.site-footer__social-link {
+/* Стили для ссылки соц. сети (a) */
+  display: block; /*делает ссылку блочным элементом, чтобы она занимала всю доступную ширину родителя*/
+}
+
+.site-footer__social-image {
+  width: auto;
+  height: 48px;
+}
