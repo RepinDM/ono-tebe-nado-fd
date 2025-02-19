@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>  
-<link rel="stylesheet" href="http://127.0.0.1:5500/fonts/fonts.css?_cacheOverride=1739216956622">
-<link rel="stylesheet" href="http://127.0.0.1:5500/styles/global.css?_cacheOverride=1739216956624">
-<link rel="stylesheet" href="http://127.0.0.1:5500/styles/style.css?_cacheOverride=1739216956629">
+<link rel="stylesheet" href="./fonts/fonts.css">
+<link rel="stylesheet" href="./styles/global.css">
+<link rel="stylesheet" href="./styles/style.css">
   </head>
 <body>
   <header class="site-header zone">  
@@ -27,21 +27,21 @@
     <a class="site-logo" href="#0">  
       <img class="logo-image" src="./images/logo-black.svg" alt="Логотип: ОНО ТЕБЕ НАДО">  
     </a>
-    <div class="header-contact"> 
+    <address class="header-contact"> 
       <a class="contact-item" href="tel:+99995555555">+9 999 555 5555</a>  
       <a class="contact-item" href="mailto:info@sobaka.ge">info@sobaka.ge</a>  
-      <address class="contact-item-address">  
+      <p class="contact-item-address">  
         наб. Принсенграхт 263- 265, Амстердам
-      </address>
-    </div>
+      </p>
+    </address>
   </header>
-  <main>
+  <main class="main">
     <section class="hero-section">
-      <div class="hero-section__backdrop"></div>
+      <div class="overlay"></div>
         <h1 class="hero-section__headline">
-          <span class="hero-section__headline-part">ОНО</span>
-          <span class="hero-section__headline-part hero-section__headline-part--centered">ТЕБЕ</span>
-          <span class="hero-section__headline-part hero-section__headline-part--right-aligned">НАДО</span>
+          <span class="hero-section__headline hero_left">ОНО</span>
+          <span class="hero-section__headline hero_centered">ТЕБЕ</span>
+          <span class="hero-section__headline hero_right">НАДО</span>
         </h1>
       <div class="hero-section__promo">
         <p class="hero-section__tagline">Аукцион вещей, в которые никто не верил</p>
@@ -49,12 +49,12 @@
       </div>
     </section>
     <section class="lots">
-      <h2 class="lots__heading relevant-section__title">Лоты</h2>
+      <h2 class="lots__heading relevant-section__title item_type_card">Лоты</h2>
       <ul class="lots__grid-list">
         <li class="lots__grid-list-item">
           <a class="item-link" href="#0">
             <article class="item item_type_film">
-              <div class="item__overlay"></div>
+              <div class="overlay"></div>
                 <h3 class="item__title">Фильм режиссёра, который бросил киношколу</h3>
                 <p class="item__description">
                   Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
@@ -66,8 +66,8 @@
           </li>
           <li class="lots__grid-list-item">
             <a class="item-link" href="#0">
-              <article class="item item_type_book">
-                <div class="item__overlay"></div>
+              <article class="item item_type_book item_type_card">
+                <div class="overlay"></div>
                   <h3 class="item__title">
                     Книга, где описан один скучный день из жизни рекламного агента
                   </h3>
@@ -84,8 +84,8 @@
           </li>
           <li class="lots__grid-list-item">
             <a class="item-link" href="#0">
-              <article class="item item_type_painting">
-                <div class="item__overlay"></div>
+              <article class="item item_type_painting item_type_card">
+                <div class="overlay"></div>
                   <h3 class="item__title">
                     Картина, которую повторит даже 5-летний сын маминой подруги
                   </h3>
@@ -109,7 +109,7 @@
           <div class="about-section__content">
               <h2 class="about-section__title">Об аукционе</h2>
               <div class="about-section__description">
-                  <p class="about-section__text">
+                  <p class="about-section__text text">
                     Здесь вы не встретите очередное пафосное собрание невероятно
                 дорогого антиквариата. Наши лоты вообще не должны были попасть&nbsp; ни
                 на один аукцион. Потому что кому нужен дневник девочки-подростка
@@ -130,14 +130,14 @@
       </div>
     </section>
   </main>
-  <footer>
-    <div class="site-footer__wrapper">
-      <aside class="site-footer__contact-info">
+  <footer class="site-footer__wrapper">
+    
+      <aside class="contact-item">
         <a class="site-footer__contact-link" href="tel:+99995555555">+9 999 555 5555</a>
         
         <a class="site-footer__contact-link" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
         
-        <p class="site-footer__contact-address">наб. Принсенграхт 263-265,<br> Амстердам</p>
+        <p class="contact-item">наб. Принсенграхт 263-265,<br> Амстердам</p>
       </aside>
       <nav class="site-footer__navigation">
         
@@ -157,23 +157,23 @@
         
         <li class="site-footer__social-item">
           <a class="site-footer__social-link" href="#0">
-            <img class="site-footer__social-image" src="./images/yt.svg" alt="youtube">
+            <img class="site-footer__social-image" src="./images/yt.svg" alt="ютуб">
           </a>
         </li>
         
         <li class="site-footer__social-item">
           <a class="site-footer__social-link" href="#0">
-            <img class="site-footer__social-image" src="./images/vk.svg" alt="vkontacte">
+            <img class="site-footer__social-image" src="./images/vk.svg" alt="вконтакте">
           </a>
         </li>
         
         <li class="site-footer__social-item">
           <a class="site-footer__social-link" href="#0">
-            <img class="site-footer__social-image" src="./images/pinterest.svg" alt="printerest">
+            <img class="site-footer__social-image" src="./images/pinterest.svg" alt="пинтерест">
           </a>
         </li>
       </ul>
-    </div>
+    
   </footer>
 </body>
 </html>

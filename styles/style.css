@@ -45,7 +45,7 @@ main {
   justify-self: center;
   align-self: center;
   width: 138px; 
-  margin-left: -124px;
+  margin-right: 124px;
   margin-top: 6px;
 }
 
@@ -85,7 +85,7 @@ main {
   overflow: hidden; 
 }
 
-.hero-section__backdrop {
+.overlay {
   position: absolute; 
   top: 0;
   left: 0;
@@ -114,14 +114,14 @@ main {
   line-height: 1;
   text-align: center; /*  Выравнивание текста по центру */
   margin-top: 7px;
-  margin-right: -32px;
+  margin-left: 32px;
 }
 
 .hero-section__headline-part--right-aligned {
   line-height: 1;
   text-align: right; /*  Выравнивание текста по правому краю */
   margin-top: 15px;
-  margin-right: -31px;
+  margin-left: 614px;
 }
 
 .hero-section__promo {
@@ -168,7 +168,7 @@ main {
   font-weight: 700;
   margin-bottom: 27px;
   margin-left: 65px;
-  margin-top: -4px;
+  margin-bottom: 4px;
   text-transform: uppercase;
 }
 
@@ -258,15 +258,7 @@ main {
 }
 
 /* --- Стили для overlay --- */
-.item__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); 
-  z-index: 0; 
-}
+
 
 /* Стили для секции "Об аукционе" */
 .about-section {
@@ -285,7 +277,7 @@ main {
   height: 240px; 
   border-radius: 50%; 
   background-color: #000000; 
-  margin-top: -27px;
+  margin-bottom: 27px;
   margin-left: 25px;
   
 }
