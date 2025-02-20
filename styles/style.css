@@ -1,7 +1,7 @@
-main {
+.main {
   display: flex;
   flex-direction: column;
-  gap: 183px; 
+  gap: 179px; 
 }
 
 /* Стили для шапки сайта */
@@ -9,7 +9,10 @@ main {
   display: grid;
   grid-template-columns: 1.51fr 2fr 1.5fr;
   align-items: center;
-  padding: 148px 50px 94px 50px;
+  padding: 92px 50px 96px 50px;
+  position: relative;
+  right: 13px;
+  bottom: 2px;
 }
 
 .nav-list {
@@ -46,7 +49,10 @@ main {
   align-self: center;
   width: 138px; 
   margin-right: 124px;
-  margin-top: 6px;
+  position: relative;
+  top: 1px;
+  right: 1px;
+  
 }
 
 .logo-image {
@@ -62,14 +68,14 @@ main {
   margin-top: 1px;
 }
 
-.contact-item {
+.contact-item {                            
   display: block;
   font-size: 18px;
   line-height: 1.35;
   text-underline-position: under; 
 }
 
-.contact-item-address {
+.contact-item-address {   /*tyt*/
   font-size: 18px;
   line-height: 1.35;
   font-style: normal;  
@@ -82,7 +88,7 @@ main {
   background-image: url(../images/cover.jpg); 
   background-repeat: no-repeat; 
   background-size: cover; 
-  overflow: hidden; 
+  
 }
 
 .overlay {
@@ -101,27 +107,30 @@ main {
   display: flex; 
   flex-direction: column; 
   gap: 20px; 
-  color: #FFF; 
-  font-weight: bold; 
+  color: #FFF;  
   font-size: 100px; 
   line-height: 1.15; 
   letter-spacing: 0.3em; /*  Расстояние между буквами, em делает значение относительным к размеру шрифта */
-  text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /*  Тень для улучшения читаемости на фоне */
 }
+.hero_left {
+  position: relative;
+    right: 12px;
+    bottom: 1px;
 
-.hero-section__headline-part--centered {
+}
+.hero_centered {
   line-height: 1;
   text-align: center; /*  Выравнивание текста по центру */
   margin-top: 7px;
-  margin-left: 32px;
+  margin-left: 6px;
 }
 
-.hero-section__headline-part--right-aligned {
+.hero_right {
   line-height: 1;
   text-align: right; /*  Выравнивание текста по правому краю */
   margin-top: 15px;
-  margin-left: 614px;
+  margin-left: 602px;
 }
 
 .hero-section__promo {
@@ -130,14 +139,15 @@ main {
   display: flex; /* Flexbox для горизонтального выравнивания */
   justify-content: flex-end; 
   align-items: center; 
-  gap: 106px; 
+  gap: 107px; 
   padding-top: 113px; 
+  right: 12px;
 }
 
 .hero-section__tagline {
   color: #FFF; 
   font-size: 22px;
-  line-height: 28px;
+  
   text-transform: uppercase;
   text-align: left;
   word-spacing: 0.824em; /*  Расстояние между словами */
@@ -164,11 +174,8 @@ main {
 /* --- Стили для секции с лотами --- */
 .relevant-section__title { 
   font-size: 40px;
-  line-height: 47px;
   font-weight: 700;
-  margin-bottom: 27px;
-  margin-left: 65px;
-  margin-bottom: 4px;
+  margin-left: 52px;
   text-transform: uppercase;
 }
 
@@ -177,8 +184,9 @@ main {
   grid-template-columns: repeat(3, 1fr); 
   gap: 25px; 
   list-style: none; 
-  padding: 0;
-  margin: 24px;
+  margin-top: 26px;
+  margin-left: 12px;
+  margin-right: 36px;
 }
 
 .lots__grid-list-item { /* Элемент списка лотов */
@@ -218,9 +226,7 @@ main {
 }
 
 /* Общие стили для фоновых изображений карточек */
-.item_type_film,
-.item_type_book,
-.item_type_painting {
+.item_type_card {
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -249,23 +255,19 @@ main {
 /* --- Стили для ссылки "Посмотреть больше" --- */
 .relevant-section__link {
   display: block; 
-  margin: 29px 0 0 65px;
+  margin: 29px 0 0 52px;
   font-size: 20px;
-  text-decoration: underline; 
   text-underline-position: under; 
   width: fit-content; 
   color: black;
 }
-
-/* --- Стили для overlay --- */
-
 
 /* Стили для секции "Об аукционе" */
 .about-section {
   display: grid; 
   grid-template-columns: auto 1fr; 
   gap: 72px; 
-  padding: 0 0 0 47px; 
+  padding: 0 0 0 34px; 
 }
 
 /* Контейнер логотипа */
@@ -277,58 +279,53 @@ main {
   height: 240px; 
   border-radius: 50%; 
   background-color: #000000; 
-  margin-bottom: 27px;
+  position: relative;
+  bottom: 24px; 
   margin-left: 25px;
   
 }
 
 /* Изображение логотипа */
 .about-section__logo-image {
-  width: 148px; /* Ширина изображения */
+  max-width: 148px; /* Ширина изображения */
   
 }
 
 /* Заголовок секции */
 .about-section__title {
   padding: 73px 0 100px; 
-  font-weight: bold; 
-  font-size: 40px; 
-  line-height: 47px; 
+  font-size: 40px;  
   text-transform: uppercase; 
 }
 
 /* Контейнер для описания */
 .about-section__description {
-  width: 693px;
-  height: 312px;
+  max-width: 693px;  
 }
-
+.about-section__content {
+  margin-top: 4px;
+}
 /* Текст описания */
 .about-section__text {
   font-size: 20px; 
-  font-weight: 400;
-  line-height: normal; 
-  margin-bottom: 27px; /* Отступ снизу для каждого абзаца */
+
+}
+.text {
+  margin-bottom: 27px; /* Отступ снизу для абзаца */
 }
 
 /* Контейнер всего блока about */
 .about-section__container {
-  display: contents; /* Убираем лишний контейнер из сетки */
+  display: contents;/* Убираем лишний контейнер из сетки */
 }
 
 .site-footer__wrapper {
   display: flex;
   justify-content: space-between;
   padding: 180px 50px 80px; /* Совмещаем padding из .footer*/
-}
-
-.site-footer__contact-info {
-  justify-self: flex-start;
-  font-style: inherit;
-  font-size: 18px;
-  line-height: 1.35;
-  text-underline-position: under;
-  margin-left: 2px;
+  position: relative;
+  right: 12px;
+  top: 3px;
 }
 
 .site-footer__contact-link {
@@ -336,15 +333,8 @@ main {
   display: block;
 }
 
-.site-footer__contact-address {
-/* Стили для адреса */
-  font-size: 18px;
-  line-height: 1.35;
-  text-underline-position: under;
-}
-
 .site-footer__navigation {
-  margin-right: -4px;/* Стили для блока навигации */
+  margin-left: 4px;/* Стили для блока навигации */
 }
 
 .site-footer__menu-list {  
