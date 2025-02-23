@@ -1,16 +1,10 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 179px; 
-}
-
 /* Стили для шапки сайта */
+
 .site-header {
   display: grid;
-  grid-template-columns: 1.51fr 2fr 1.5fr;
+  grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   padding: 92px 50px 96px 50px;
-
 }
 
 .nav-list {
@@ -18,28 +12,26 @@
   display: flex;
   gap: 32px;
   margin-bottom: 3px;
-  padding-left: 2px;
 }
 
 .nav-item {
   text-decoration: underline;
   text-underline-offset: 4px;
-  
 }
 
 .nav-item--active {
   text-decoration: none;
-  list-style: none; /* Убираем подчеркивание */ 
+  list-style: none; /* Убираем подчеркивание */
 }
 
-.nav-link { 
-  font-size: 18px; 
+.nav-link {
+  font-size: 18px;
   color: inherit; /* Наследуем цвет от родителя */
-  white-space: nowrap; /* Добавлено для избежания переноса текста */
+  white-space: nowrap;
 }
 
 .nav-link--current {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 /* Логотип сайта */
@@ -47,100 +39,94 @@
   display: block;
   justify-self: center;
   align-self: center;
-  width: 138px; 
-  margin-right: 124px;
+  width: 138px;
 }
 
 .logo-image {
   width: 100%;
-  display: block; 
+  display: block;
 }
 
 /* Контактная информация в шапке */
-.contact {
+.header__contact {
   justify-self: end;
-  margin-left: 23px;
   margin-bottom: 2px;
-  font-style: normal;
+  max-width: 240px;
 }
-
-.contact-item {                            
+.address {
+  font-style: inherit;
+}
+.address_item {
   display: block;
   font-size: 18px;
   line-height: 1.35;
-  text-underline-position: under; 
-  font-style: inherit;
-}
-
-.contact-item-address {   /*tyt*/
-  /*font-size: 18px;
-  line-height: 1.35;
-  /*font-style: normal;*/  
+  text-underline-position: under;
 }
 
 /* Общий контейнер секции */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 155px;
+}
 .hero-section {
-  position: relative; 
-  padding: 165px 50px 50px 50px; 
-  background-image: url(../images/cover.jpg); 
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  
+  position: relative;
+  padding: 165px 50px 50px 50px;
+  background-image: url(../images/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .overlay {
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 0; 
+  z-index: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .hero-section__headline {
-  
+  position: relative;
   z-index: 1;
-  display: flex; 
-  flex-direction: column; 
-  gap: 20px; 
-  color: #FFF;  
-  font-size: 100px; 
-  line-height: 1.15; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+  font-size: 100px;
+  line-height: 1.15;
   letter-spacing: 0.3em; /*  Расстояние между буквами, em делает значение относительным к размеру шрифта */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /*  Тень для улучшения читаемости на фоне */
 }
 
-.hero_height {
-  line-height: 1;
+.hero-section_text {
+  text-transform: uppercase;
 }
 
-.hero_centered {
+.hero-section_text_centered {
+  transform: translateX(15px);
   text-align: center; /*  Выравнивание текста по центру */
-  margin-top: 7px;
-  margin-left: 31px;
 }
 
-.hero_right {
-  text-align: right; /*  Выравнивание текста по правому краю */
-  margin-top: 15px;
-  margin-left: 614px;
+.hero-section_text_right {
+  text-align: right;
+  transform: translateX(30px);
 }
 
 .hero-section__promo {
-  /*position: relative;*/ 
+  position: relative;
   z-index: 1;
   display: flex; /* Flexbox для горизонтального выравнивания */
-  justify-content: flex-end; 
-  align-items: center; 
-  gap: 107px; 
-  padding-top: 112px; 
+  justify-content: flex-end;
+  align-items: center;
+  gap: 107px;
+  padding-top: 106px;
 }
 
 .hero-section__tagline {
-  color: #FFF; 
+  color: #fff;
   font-size: 22px;
-  
   text-transform: uppercase;
   text-align: left;
   word-spacing: 0.824em; /*  Расстояние между словами */
@@ -148,60 +134,65 @@
 }
 
 .hero-section__action-button {
-  border: 1px solid #FFF; 
-  padding: 14px 32px; 
-  color: #FFF; 
-  font-weight: normal; 
-  font-size: 22px; 
-  line-height: 1; 
-  text-transform: uppercase; 
-  background-color: transparent; 
-  cursor: pointer; 
-  transition: background-color 0.3s, color 0.3s; 
+  border: 1px solid #fff;
+  padding: 14px 32px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .hero-section__action-button:hover {
-  color: #b72aba; 
-  background-color: #FFF; 
+  color: #b72aba;
+  background-color: #fff;
 }
 /* --- Стили для секции с лотами --- */
-.relevant-section__title { 
+.lots {
+  padding-top: 23px;
+}
+.relevant-section__title {
   font-size: 40px;
   font-weight: 700;
   margin-left: 64px;
   text-transform: uppercase;
 }
-
-.lots__grid-list { 
-  display: grid; 
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 25px; 
-  list-style: none; 
-  margin-top: 26px;
-  margin-left: 25px;
+.lots__grid-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  list-style: none;
+  margin-top: 25px;
+  margin-left: 24px;
   margin-right: 24px;
 }
 
-.lots__grid-list-item { /* Элемент списка лотов */
-  height: 100%;  
-}
-
-.item-link { /* Ссылка, оборачивающая карточку */
-  display: block; 
+.lots__grid-list-item {
+  /* Элемент списка лотов */
   height: 100%;
-  text-decoration: none; 
 }
 
-.item { /* Общий стиль для карточки */
+.item-link {
+  /* Ссылка, оборачивающая карточку */
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.item {
+  /* Общий стиль для карточки */
   position: relative;
-  display: flex; 
-  flex-direction: column; 
-  justify-content: space-between; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 32px;
   width: 100%;
   height: 100%;
   padding: 50px 40px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 /* --- Стили для разных типов карточек (фон) --- */
@@ -214,7 +205,7 @@
   background-image: url(../images/card-lot-02.jpg);
 }
 
-.item_type_painting { 
+.item_type_painting {
   background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -225,43 +216,45 @@
   background-position: center; /* Располагает фон по центру */
 }
 
-.item__title { /* Заголовок карточки */
-  position: relative; 
-  z-index: 1; 
-  color: #FFF; 
-  font-weight: bold; 
+.item__title {
+  /* Заголовок карточки */
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-weight: bold;
   font-size: 22px;
-  line-height: 1.2; 
-  text-decoration: underline; 
-  text-transform: uppercase; 
-  
+  line-height: 1.2;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
-.item__description { /* Описание карточки */
-  position: relative; 
+.item__description {
+  /* Описание карточки */
+  position: relative;
   z-index: 1; /* Поверх overlay */
-  color: #FFF; 
+  color: #fff;
   font-size: 20px;
-  line-height: 1.2; 
-  margin-left: 2px;
+  line-height: 1.2;
+  margin-top: 2px;
 }
 
 /* --- Стили для ссылки "Посмотреть больше" --- */
 .relevant-section__link {
-  display: block; 
+  display: block;
   margin: 30px 0 0 64px;
   font-size: 20px;
-  text-underline-position: under; 
-  width: fit-content; 
+  text-underline-position: under;
+  width: fit-content;
   color: black;
+  margin-top: 28px;
 }
 
 /* Стили для секции "Об аукционе" */
 .about-section {
-  display: grid; 
-  grid-template-columns: auto 1fr; 
-  gap: 72px; 
-  padding: 0 24px; 
+  display: grid;
+  grid-template-columns: 334px 1fr;
+  gap: 25px;
+  padding: 0 24px;
 }
 
 /* Контейнер логотипа */
@@ -269,67 +262,57 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 240px; 
-  height: 240px; 
-  border-radius: 50%; 
-  background-color: #000000; 
-  position: relative;
-  bottom: 24px; 
-  margin-left: 48px;
-  
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #000000;
+  justify-self: center;
 }
 
 /* Изображение логотипа */
 .about-section__logo-image {
   max-width: 148px; /* Ширина изображения */
-  
 }
 
 /* Заголовок секции */
 .about-section__title {
-  padding: 73px 0 100px; 
-  font-size: 40px;  
-  text-transform: uppercase; 
+  padding: 102px 0 100px;
+  font-size: 40px;
+  text-transform: uppercase;
 }
 
 /* Контейнер для описания */
 .about-section__description {
-  max-width: 693px;  
-}
-.about-section__content {
-  margin-top: 4px;
+  max-width: 693px;
+  display: grid;
+  gap: 27px;
 }
 /* Текст описания */
 .about-section__text {
-  font-size: 20px; 
-
+  font-size: 20px;
 }
-.text {
-  margin-bottom: 27px; /* Отступ снизу для абзаца */
-}
-
 /* Контейнер всего блока about */
 .about-section__container {
-  display: contents;/* Убираем лишний контейнер из сетки */
+  display: contents; /* Убираем лишний контейнер из сетки */
 }
 
 .site-footer__wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 180px 50px 82px; /* Совмещаем padding из .footer*/
-  margin-top: 3px;
-}
-.site-footer__contact-link {
-/* Стили для ссылок (телефон, email) */
-  display: block;
-  
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  padding: 180px 50px 80px; /* Совмещаем padding из .footer*/
+  margin-top: 2px;
 }
 
+.footer__contact {
+  /*display: block;*/
+  max-width: 264px;
+}
 .site-footer__navigation {
-  margin-left: 5px;/* Стили для блока навигации */
+  margin-left: 3px; /* Стили для блока навигации */
+  margin-top: 1px;
 }
 
-.site-footer__menu-list {  
+.site-footer__menu-list {
   text-align: center;
   list-style: none;
   font-size: 18px;
@@ -341,7 +324,7 @@
   font-size: 18px;
   line-height: normal;
   text-underline-position: under;
-  color: inherit;       /* Наследуем цвет от родителя, чтобы работали стили ссылок */
+  color: inherit; /* Наследуем цвет от родителя, чтобы работали стили ссылок */
 }
 .site-footer__menu-active {
   text-decoration: none;
@@ -350,11 +333,11 @@
 .site-footer__social-links {
   display: flex;
   gap: 48px;
+  justify-self: flex-end;
   list-style: none;
 }
 
 .site-footer__social-link {
-/* Стили для ссылки соц. сети (a) */
   display: block; /*делает ссылку блочным элементом, чтобы она занимала всю доступную ширину родителя*/
 }
 
