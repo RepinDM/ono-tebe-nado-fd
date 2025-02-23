@@ -99,7 +99,7 @@
 }
 
 .hero-section__headline {
-  /*position: relative; */
+  
   z-index: 1;
   display: flex; 
   flex-direction: column; 
@@ -110,15 +110,11 @@
   letter-spacing: 0.3em; /*  Расстояние между буквами, em делает значение относительным к размеру шрифта */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /*  Тень для улучшения читаемости на фоне */
 }
-/*.hero_left {
-  right: 0px;
-  bottom: 1px;
-
-}*/
 
 .hero_height {
   line-height: 1;
 }
+
 .hero_centered {
   text-align: center; /*  Выравнивание текста по центру */
   margin-top: 7px;
@@ -132,7 +128,7 @@
 }
 
 .hero-section__promo {
-  position: relative; 
+  /*position: relative;*/ 
   z-index: 1;
   display: flex; /* Flexbox для горизонтального выравнивания */
   justify-content: flex-end; 
@@ -226,6 +222,7 @@
 .item_type_card {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center; /* Располагает фон по центру */
 }
 
 .item__title { /* Заголовок карточки */
@@ -321,7 +318,7 @@
   justify-content: space-between;
   padding: 180px 50px 82px; /* Совмещаем padding из .footer*/
   margin-top: 3px;
-
+}
 .site-footer__contact-link {
 /* Стили для ссылок (телефон, email) */
   display: block;
